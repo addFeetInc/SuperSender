@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>SuperSender</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="images/paper_plane.png" />
+    <link href="assets/css/super_sender.css" rel="stylesheet"/>
+
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" class="navbar navbar-dark bg-black">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse custom-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-link" data-bs-toggle="modal" data-bs-target="#guide-modal" style="cursor: pointer;">USER GUIDE</li>
+              <li class="nav-link" data-bs-toggle="modal" data-bs-target="#about-modal" style="cursor: pointer;">ABOUT</li>
+              <li class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal" style="cursor: pointer;">CONTACT</li>
+              <li class="nav-link" data-bs-toggle="modal" data-bs-target="#connect-modal" style="cursor: pointer;">CONNECT</li>
+              <li class="nav-link" data-bs-toggle="modal" data-bs-target="#privacy-modal" style="cursor: pointer;">PRIVACY</li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+      <div id="banner">
+        <img src="images/paper_plane.png" alt="Favicon" width="60" height="60" />
+        <h1>SuperSender</h1>
+      </div>
+      <div id="tabbar">
+        <button class="btn btn-secondary" id="show-file-tab">FILE</button>
+        <button class="btn btn-secondary" id="show-company-tab">COMPANIES</button>
+        <button class="btn btn-secondary" id="show-person-tab">PEOPLE</button>
+        <button class="btn btn-secondary" id="show-list-tab">LISTS</button>
+        <button class="btn btn-secondary" id="show-generic-email-tab">GENERIC EMAILS</button>
+        <button class="btn btn-secondary" id="show-all-tab">SHOW ALL</button>
+      </div>
+    </header>
+    <main>
+      <section id="modals">
+        <div class="modal fade" id="guide-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header"><h3>USER GUIDE</h3></div>
+                  <div class="modal-body text-break">This is the user guide</div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade" id="about-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header"><h3>ABOUT</h3></div>
+                  <div class="modal-body text-break">
+                    <p>SuperSender is web application by Digital Builder Tools (DBT).<br>
+                    For other products by DBT, check out our <a href="" target="_blank"><i>landing page</i></a>.</p>
+                    <br>
+                    <h4>Mission</h4>
+                    <p>Provide a dynamic <strong>mailing list management application</strong> that is easy-to-use for simple distribution, but also granular enough for power-users to coordinate with a multitude of vendors, customers and internal departments.</p>
+                    <br>
+                    <h4>History</h4>
+                    SuperSender was created in 2025, and brought online the same year.
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade" id="contact-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header"><h3>CONTACT</h3></div>
+                  <div class="modal-body text-break">
+                    <p>For any inquiries, please send an email to:</p>
+                    <p>To report bugs or make recommendations site improvement or new features, send an email to:</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade" id="connect-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header"><h3>CONNECT</h3></div>
+                  <div class="modal-body text-break">
+                    <p>Social pages are currently being updated.</p>
+                    <p>Check back soon.</p>
+                    <div class="social-icons"><i class="bi bi-linkedin"></i>  |  <i class="bi bi-twitter"></i>  |  <i class="bi bi-instagram"></i>  |  <i class="bi bi-tiktok"></i></div>
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade" id="privacy-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header"><h3>PRIVACY POLICY</h3></div>
+                  <div class="modal-body text-break">This is the privacy policy section</div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade aligned" id="company-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                      <button class="btn btn-primary apply">Apply</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade aligned" id="person-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                      <button class="btn btn-primary apply">Apply</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade aligned" id="list-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body text-break">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                      <button class="btn btn-primary apply">Apply</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal fade aligned" id="generic-email-modal" tab-index="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body text-break">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                      <button class="btn btn-primary apply">Apply</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+  
+      </section>
+      <section id="file-tab">
+        <h5>FILE MANAGER</h5>
+        <div>
+          <h6>Local Memory</h6>
+          <button id="load-memory">Recover Memory</button>
+          <button id="clear-memory">Clear Memory</button>
+        </div>
+        <!-- <br> -->
+        <div>
+          <h6>Upload from File</h6>
+          <input type="file" id="file-upload" accept=".xlsx, .xls">
+          <button id="load-file">Load file</button>
+        </div>
+        <!-- <br> -->
+        <div>
+          <h6>Save to File</h6>
+          <span>File Name for Saving: </span><input type="text" id="file-save-name">
+          <button id="save-file">Save file</button>
+        </div>
+        <br>
+        <div>
+          <h6>File History</h6>
+          <div id="output">
+          </div>
+        </div>
+        <br>
+      </section>
+      <section id="company-tab">
+        <div id="fixed-container-company">
+          <h5>COMPANIES</h5>
+          <div id="modify-company-grid-container">
+            <button id="init-add-company-btn">New Company</button>
+            <button id="init-del-company-btn">Remove Company</button>
+            <br>
+            <div id="add-company-container" class="hidden">
+              <input type="text" id="add-company-input" placeholder="Enter company name"/>
+              <button id="add-company-btn">Add Company</button>
+            </div>
+            <div id="del-company-container" class="hidden">
+              <input type="text" id="del-company-input" placeholder="Enter company ID"/>
+              <button id="del-company-btn">Delete Company</button>
+            </div>
+          </div>
+          <!-- <br> -->
+          <div id="company-hidden-column-container">Hidden Columns: </div>
+          <!-- <br> -->
+        </div>
+    
+        <table id="company-grid">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section  id="person-tab">
+        <div id="fixed-container-person">
+          <h5>PEOPLE</h5>
+          <div id="modify-person-grid-container">
+            <button id="init-add-col-btn">New Column</button>
+            <button id="init-add-per-btn">New Person</button>
+            <button id="init-del-col-btn">Remove Column</button>
+            <button id="init-del-per-btn">Remove Person</button>
+            <br>
+            <div id="add-col-container" class="hidden">
+              <input type="text" id="add-column-person-input" placeholder="Enter column name"/>
+              <select id="add-column-person-type-select">
+                <option value="_">General (_)</option>
+                <option value="&">Integer (&)</option>
+                <option value='#' selected>Group (#)</option>
+                <option value='!'>Point (!)</option>
+              </select>
+              <button id="add-column-person-btn">Add Column</button>
+            </div>
+            <div id="add-per-container" class="hidden">
+              <input type="text" id="add-per-person-input-name" placeholder="Enter person name"/>
+              <select id="add-per-person-select-company"></select>
+              <input type="email" id="add-per-person-input-email" placeholder="Enter email address"/>
+              <button id="add-per-person-btn">Add Person</button>
+            </div>
+            <div id="del-col-container" class="hidden">
+              <input type="text" id="del-column-person-input" placeholder="Enter column name"/>
+              <button id="del-column-person-btn">Delete Column</button>
+            </div>
+            <div id="del-per-container" class="hidden">
+              <input type="text" id="del-per-person-input" placeholder="Enter person ID"/>
+              <button id="del-per-person-btn">Delete Person</button>
+            </div>
+          </div>
+          <!-- <br> -->
+          <div id="person-hidden-column-container">Hidden Columns: </div>
+          <!-- <br> -->
+        </div>
+        <table id="person-grid">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="list-tab">
+        <div id="fixed-container-list">
+          <h5>LISTS</h5>
+          <div id="modify-list-grid-container">
+            <button id="init-add-list-btn">New List</button>
+            <button id="init-del-list-btn">Remove List</button>
+            <br>
+            <div id="add-list-container" class="hidden">
+              <input type="text" id="add-list-input" placeholder="Enter list name"/>
+              <button id="add-list-btn">Add List</button>
+            </div>
+            <div id="del-list-container" class="hidden">
+              <input type="text" id="del-list-input" placeholder="Enter list ID"/>
+              <button id="del-list-btn">Delete List</button>
+            </div>
+          </div>
+          <!-- <br> -->
+          <div id="list-hidden-column-container">Hidden Columns: </div>
+          <!-- <br> -->
+        </div>
+    
+  
+  
+        <table id="list-grid">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="generic-email-tab">
+        <div id="fixed-container-generic-email">
+          <h5>GENERIC EMAILS</h5>
+          <div id="modify-generic-email-grid-container">
+            <button id="init-add-generic-email-btn">New Generic Email</button>
+            <button id="init-del-generic-email-btn">Remove Generic Email</button>
+            <br>
+            <div id="add-generic-email-container" class="hidden">
+              <input type="text" id="add-generic-email-input" placeholder="Enter Generic Email name"/>
+              <button id="add-generic-email-btn">Add Generic Email</button>
+            </div>
+            <div id="del-generic-email-container" class="hidden">
+              <input type="text" id="del-generic-email-input" placeholder="Enter Generic Email ID"/>
+              <button id="del-generic-email-btn">Delete Generic Email</button>
+            </div>
+          </div>
+          <!-- <br> -->
+          <div id="generic-email-hidden-column-container">Hidden Columns: </div>
+          <!-- <br> -->
+        </div>
+        <table id="generic-email-grid">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+        <div class="filler"></div>
+      </div>
+      </section>
+    </main>
+
+  </body>
+
+  <script src="assets/js/aux_tests.js"></script>
+  <script src="assets/js/show_hide_containers.js"></script>
+  <script src="assets/js/modal_builder.js"></script>
+  <script src="assets/js/table_builder.js"></script>
+  <script src="assets/js/super_sender.js"></script>
+  
+
+
+  <!-- SheetJS -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+  </html>
