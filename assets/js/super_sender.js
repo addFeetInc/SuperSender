@@ -1505,9 +1505,11 @@ function isMobileBrowser() {
 document.addEventListener('DOMContentLoaded', () => {
     if (isMobileBrowser()) {
         const main = document.querySelector('main');
-        main.style.marginTop = main.style.marginTop + '30px'
+        const margin_top = parseInt(getComputedStyle(main).marginTop)
+        console.log('top margin:', margin_top)
+        main.style.marginTop = `${margin_top+50}px`
     }
-});
+})
 
 //////////EVENT LISTENERS//////////
 loadButton.addEventListener('click',loadFile)
