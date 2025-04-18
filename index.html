@@ -56,7 +56,165 @@
           <div class="modal-dialog modal-lg">
               <div class="modal-content">
                   <div class="modal-header"><h3>USER GUIDE</h3></div>
-                  <div class="modal-body text-break">This is the user guide</div>
+                  <div class="modal-body text-break">
+                    <div id="user-guide-text">
+                      <br>
+                      <h2>Overview</h2>
+                      <p>SuperSender compiles digital mailing lists and creates email templates for the user.</p>
+                    
+                      <p><strong>Workflow:</strong></p>
+                      <ol>
+                        <li><strong>Add companies and people</strong> to your project.</li>
+                        <li><strong>Assign positions</strong> to people.</li>
+                        <li><strong>Build your lists.</strong></li>
+                        <li><strong>Create your email templates.</strong></li>
+                      </ol>
+                    
+                      <p><strong>Important:</strong><br>
+                      List compilation is based on <strong>company &amp; position</strong>. A person is included in a list <strong>only if BOTH</strong> of the following are true:</p>
+                      <ul>
+                        <li>The person's <strong>company</strong> is included on the list.</li>
+                        <li>The person is <strong>assigned a position</strong> that is included on the list.</li>
+                      </ul>
+                      <p>If either condition is <em>not met</em>, the person will be <strong>omitted</strong> from the list.</p>
+                    
+                      <br>
+                      <h2>Step-by-Step</h2>
+                    
+                      <h4>Companies</h4>
+                      <ol>
+                        <li>Add companies, assigning each a name.</li>
+                        <li>A unique <code>Company_ID</code> is automatically assigned.</li>
+                      </ol>
+                    
+                      <h4>People</h4>
+                      <ol>
+                        <li>Add people, assigning:
+                          <ul>
+                            <li>An <strong>email address</strong></li>
+                            <li>A <strong>company</strong> (if left blank, they will be marked as <code>"UNASSIGNED (id: 0)"</code>)</li>
+                          </ul>
+                        </li>
+                        <li>A unique <code>Person_ID</code> is automatically assigned.</li>
+                        <li>Create <strong>positions</strong> (groups &amp; points) by adding columns.</li>
+                        <li>Select applicable positions for each person.</li>
+                      </ol>
+                    
+                      <h4>Lists</h4>
+                      <ol>
+                        <li>Create lists by assigning a name (<code>List_ID</code> is automatically assigned).</li>
+                        <li>Select which <strong>positions</strong> from which <strong>companies</strong> are to be added to the list.
+                          <ul>
+                            <li><strong>Inclusive <i class="bi bi-check-square"></i></strong> = ALL companies included EXCEPT for those listed as <strong>Exceptions</strong></li>
+                            <li><strong>Inclusive <i class="bi bi-square"></i></strong> = NO companies included EXCEPT for those listed as <strong>Exceptions</strong></li>
+                          </ul>
+                        </li>
+                        <li>You can:
+                          <ul>
+                            <li><strong>Copy</strong> the email addresses to clipboard.</li>
+                            <li><strong>Build</strong> an email template for commonly distributed emails.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    
+                      <h4>Emails</h4>
+                      <ol>
+                        <li>Create emails and assign each a name (<code>Email_ID</code> is automatically assigned).</li>
+                        <li>Select which lists go in the <strong>To</strong>, <strong>Cc</strong>, and <strong>Bcc</strong> fields.</li>
+                        <li>Edit all other fields as necessary.</li>
+                        <li>Click <strong>Preview</strong> to inspect the email and ensure it's error-free.</li>
+                        <li>Click <strong>Download</strong> to export the email draft as a <code>.EML</code> file.</li>
+                        <li><strong>Drag &amp; drop</strong> the <code>.EML</code> file into your <strong>Email Client Application's Drafts</strong> folder.</li>
+                        <li>Review and send.</li>
+                      </ol>
+                    
+                      <br>
+                      <h2>Data Storage</h2>
+                      <p>SuperSender does <strong>not</strong> require sign-in or store any <strong>table data</strong> on an external database. All data:</p>
+                      <ul>
+                        <li>Is stored <strong>locally in your browser</strong> during use (via Local Storage).</li>
+                        <li>Can be <strong>downloaded</strong> as an Excel file.</li>
+                        <li>Can be <strong>re-uploaded</strong> to restore your session later.</li>
+                      </ul>
+                    
+                      <p><strong><i class="bi bi-exclamation-triangle"></i> Note:</strong> Local Storage persistence depends on your browser and its configuration.  
+                      To avoid data loss, always download and save your Excel file after making changes.</p>
+                    
+                      <p><strong>Tools Available:</strong></p>
+                      <ul>
+                        <li><strong>Recover Memory</strong> - Restore session data from Local Storage.</li>
+                        <li><strong>Clear Memory</strong> - Permanently erase session data from the browser.</li>
+                      </ul>
+                    
+                      <br>
+                      <h2>Editing from Saved Excel File</h2>
+                      <p>Some actions cannot be done directly in the SuperSender UI, including:</p>
+                      <ul>
+                        <li>Duplicating a company/person/list/email.</li>
+                        <li>Changing an ID# (<code>Company_ID</code>, <code>Person_ID</code>, etc.).</li>
+                        <li>Duplicating or renaming a position (column) on the People table.</li>
+                        <li>Adding new informational columns to the Company table.</li>
+                      </ul>
+                    
+                      <p>To perform these actions, manual changes to the excel file is required:</p>
+                      <ol>
+                        <li>Go to the <strong>File</strong> tab and click <strong>Save to File</strong>.</li>
+                        <li>Open the downloaded Excel file and make your changes.</li>
+                        <li>Use <strong>Upload from File</strong> to import your updated data.</li>
+                      </ol>
+                    
+                      <p><strong><i class="bi bi-exclamation-circle"></i> Caution:</strong> Do not:</p>
+                      <ul>
+                        <li>Edit any columns or column headings in the <strong>List</strong> or <strong>Email</strong> tables.</li>
+                        <li>Edit any <strong>ID column headings</strong>.</li>
+                        <li>Allow any repeat <strong>ID numbers</strong>.</li>
+                      </ul>
+                    
+                      <br>
+                      <h2>Data Type Symbols</h2>
+                      <p>In the Excel file, column names include symbols indicating their data types:</p>
+                      <table border="1" cellpadding="6">
+                        <tr><th>Symbol</th><th>Data Type</th></tr>
+                        <tr><td>!</td><td>Boolean - Point</td></tr>
+                        <tr><td>#</td><td>Boolean - Group</td></tr>
+                        <tr><td>%</td><td>Array of Integers</td></tr>
+                        <tr><td>*</td><td>Array of Strings</td></tr>
+                        <tr><td>&amp;</td><td>Integer</td></tr>
+                        <tr><td>_</td><td>String (also applies if no symbol is present)</td></tr>
+                        <tr><td>.</td><td>Hidden Column</td></tr>
+                      </table>
+                    
+                      <br>
+                      <h4>Points &amp; Groups</h4>
+                      <p>Currently, <strong>groups</strong> and <strong>points</strong> function the same.  
+                      In future versions, <strong>points</strong> will be distinct positions that only one person per company can hold (e.g., <em>Point Man for XYZ</em>).</p>
+                    
+                      <br>
+                      <h2>Uploading</h2>
+                      <p><strong><i class="bi bi-exclamation-circle"></i> Caution: </strong>When you upload a file using <strong>Upload from File</strong>, all current table data in your open page will be <strong>permanently overwritten</strong>.</p>
+                    
+                      <p><strong>Before uploading:</strong></p>
+                      <ul>
+                        <li>Ensure your Excel file was originally downloaded using the <strong>Save to File</strong> feature, or closely follows that template.</li>
+                        <li>Only edit the Excel file using the guidelines provided in the "Editing from Saved Excel File" section.</li>
+                        <li>Avoid modifying <strong>any ID columns</strong> or the <strong>column structure</strong> of the <strong>List</strong> or <strong>Email</strong> tables.</li>
+                      </ul>
+
+                      <br>
+                      <h2>Downloading / Saving</h2>
+                      <p>To back up your current data or prepare for manual editing, you can use the <strong>Save to File</strong> option to download an Excel file containing all your current tables and configurations.</p>
+                    
+                      <p>This file can be:</p>
+                      <ul>
+                        <li>Re-uploaded later to restore your session.</li>
+                        <li>Edited outside of SuperSender (with care and following the proper guidelines).</li>
+                        <li>Used as a <strong>template</strong> to convert an existing contact list into the correct format.</li>
+                      </ul>
+                    
+                      <p><strong><i class="bi bi-check-circle"></i> Tip:</strong> Regularly download your project file after making changes to avoid losing progress or relying solely on browser storage.</p>
+                    
+                    </div>
+                  </div>
                   <div class="modal-footer">
                       <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
                   </div>
@@ -69,7 +227,7 @@
                   <div class="modal-header"><h3>ABOUT</h3></div>
                   <div class="modal-body text-break">
                     <p>SuperSender is web application by Digital Builder Tools (DBT).<br>
-                    For other products by DBT, check out our <a href="" target="_blank"><i>landing page</i></a>.</p>
+                    For other products by DBT, check out our <a href="https://sites.google.com/view/digitalbuildertools/home" target="_blank"><i>landing page</i></a>.</p>
                     <br>
                     <h4>Mission</h4>
                     <p>Provide a dynamic <strong>mailing list management application</strong> that is easy-to-use for simple distribution, but also granular enough for power-users to coordinate with a multitude of vendors, customers and internal departments.</p>
@@ -88,8 +246,8 @@
               <div class="modal-content">
                   <div class="modal-header"><h3>CONTACT</h3></div>
                   <div class="modal-body text-break">
-                    <p>For any inquiries, please send an email to:</p>
-                    <p>To report bugs or make recommendations site improvement or new features, send an email to:</p>
+                    <p>For any inquiries, please send an email to: <br><a href="mailto:contact@supersender.app">contact@supersender.app</a></p>
+                    <p>To report bugs or make recommendations site improvement or new features, send an email to: <br><a href="mailto:support@supersender.app">support@supersender.app</a></p>
                   </div>
                   <div class="modal-footer">
                       <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
@@ -116,7 +274,49 @@
           <div class="modal-dialog modal-lg">
               <div class="modal-content">
                   <div class="modal-header"><h3>PRIVACY POLICY</h3></div>
-                  <div class="modal-body text-break">This is the privacy policy section</div>
+                  <div class="modal-body text-break" style="text-align: left;">
+                  <!-- Privacy Policy -->
+                    <p><strong>Effective Date:</strong> 04/17/2025</p>
+                    
+                    <p>This Privacy Policy outlines how we use and protect your information when you visit our website. By using our website, you consent to the practices described in this policy.</p>
+
+                    <h4>1. Data Collection and Use</h4>
+                    <p>We do not collect any personal data directly from visitors to our website. However, we do use third-party services, such as <strong>Google AdSense</strong>, to display ads on our site. These third-party services may collect data through the use of <strong>cookies</strong> or similar technologies to track user behavior across websites for the purpose of serving personalized ads.</p>
+
+                    <h4>2. Cookies and Tracking Technologies</h4>
+                    <p>Our website uses <strong>cookies</strong> to enhance user experience and serve personalized ads. A cookie is a small text file placed on your device to store information about your visits and interactions with our website and other websites across the internet.</p>
+                    <p><strong>Google AdSense</strong> and other third-party advertising networks use cookies to serve ads based on your prior visits to this website and other sites. These cookies allow advertisers to deliver more relevant and personalized advertisements to users.</p>
+                    <p><strong>DART Cookie:</strong> Google uses the <strong>DART cookie</strong> to serve ads based on your visit to this and other sites on the internet. You can opt out of the use of the DART cookie by visiting <a href="https://www.google.com/settings/ads" target="_blank">Google's Ads Settings</a>.</p>
+                    <p>For more information about how Google uses data when you visit sites or apps that use its services, please refer to <a href="https://policies.google.com/privacy" target="_blank">Google’s Privacy & Terms</a>.</p>
+
+                    <h4>3. Third-Party Advertising</h4>
+                    <p>This website uses <strong>third-party advertising services</strong> (such as Google AdSense) to display ads. These third-party vendors may use cookies or web beacons to collect information about your activities on this website and other websites to provide targeted advertisements based on your interests.</p>
+                    <p>We encourage you to visit the following links for more information on how these third parties use your information and how you can opt out:</p>
+                    <ul>
+                      <li><a href="https://policies.google.com/privacy" target="_blank">Google's Privacy & Terms</a></li>
+                      <li><a href="https://www.google.com/settings/ads" target="_blank">Google Ad Settings</a></li>
+                      <li><a href="http://optout.networkadvertising.org/" target="_blank">Network Advertising Initiative Opt-Out</a></li>
+                    </ul>
+
+                    <h4>4. Links to Third-Party Websites</h4>
+                    <p>Our website may contain links to third-party websites that are not controlled or operated by us. We are not responsible for the privacy practices or content of these third-party websites. We recommend reviewing the privacy policies of any third-party websites you visit.</p>
+
+                    <h4>5. Your Consent and Choices</h4>
+                    <p>By using our website, you consent to the use of cookies and the collection of non-personally identifiable information by third-party services, such as Google AdSense. You can manage your cookie preferences and opt out of personalized advertising by visiting the following:</p>
+                    <ul>
+                      <li><a href="https://www.google.com/settings/ads" target="_blank">Google Ads Settings</a></li>
+                      <li><a href="http://optout.networkadvertising.org/" target="_blank">Network Advertising Initiative Opt-Out</a></li>
+                    </ul>
+
+                    <h4>6. Compliance with Laws</h4>
+                    <p>We are committed to complying with applicable privacy regulations, including the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>. If you are a resident of the European Union or California, you may have specific rights under these laws, including the right to access, correct, or delete your personal information.</p>
+                    <p>If you are in the European Union and wish to exercise your data protection rights, please contact us through the contact page on our website.</p>
+
+                    <h4>7. Changes to This Privacy Policy</h4>
+                    <p>We reserve the right to update this Privacy Policy at any time. Any changes will be reflected on this page, and the updated policy will take effect immediately after it is posted.</p>
+                    <p>Please check this Privacy Policy periodically for updates.</p>
+
+                  </div>
                   <div class="modal-footer">
                       <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
                   </div>
@@ -332,9 +532,13 @@
         <div class="filler"></div>
       </div>
       </section>
+
     </main>
 
   </body>
+  <footer style="height: 30px; font-size: 12px; background-color: white; position: relative; z-index: 1001; text-align: center;">
+    2025 Digital Builder Tools. All rights reserved. <a href="#" data-bs-toggle="modal" data-bs-target="#privacy-modal" style="font-size: 12px; color: grey; text-decoration: underline;">Privacy Policy</a>
+  </footer>
 
   <script src="assets/js/aux_tests.js"></script>
   <script src="assets/js/show_hide_containers.js"></script>
