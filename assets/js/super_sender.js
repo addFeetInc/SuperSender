@@ -1495,6 +1495,21 @@ function arrayOfEmailAddressesFromPersonIDs(array_of_pids){
 }
 
 //Fix Top Margin on Mobile Version
+function isMobileBrowser() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+  
+  function setRealVh() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    if (isMobileBrowser()) {
+      setRealVh(); // Run on initial load
+      window.addEventListener('resize', setRealVh); // Run on resize
+    }
+});
 
 //////////EVENT LISTENERS//////////
 loadButton.addEventListener('click',loadFile)
