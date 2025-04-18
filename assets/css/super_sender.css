@@ -54,6 +54,11 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+footer{
+    color:black;
+    margin-top: -20px;
+    position: fixed;
+}
 
 
 /* Buttons */
@@ -507,8 +512,9 @@ section table thead tr{
     margin-left: 10px;
 }
 
-
-
+#user-guide-text{
+    text-align: left;
+}
 
 
 /* .filler{
