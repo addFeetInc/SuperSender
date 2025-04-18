@@ -1507,7 +1507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const main = document.querySelector('main');
         const margin_top = parseInt(getComputedStyle(main).marginTop)
         console.log('top margin:', margin_top)
-        main.style.marginTop = `${margin_top+50}px`
+        main.style.marginTop = `${margin_top+90}px`
     }
 })
 
