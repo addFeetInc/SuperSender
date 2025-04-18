@@ -1495,13 +1495,17 @@ function arrayOfEmailAddressesFromPersonIDs(array_of_pids){
 }
 
 //Fix Top Margin on Mobile Version
+function isMobileBrowser() {
+    return (
+        /Mobi|Android/i.test(navigator.userAgent) ||
+        (navigator.maxTouchPoints && navigator.maxTouchPoints > 1)
+    );
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('header');
-    const content = document.querySelector('main');
-  
-    if (header && content) {
-      const headerHeight = header.offsetHeight;
-      content.style.marginTop = headerHeight + 'px';
+    if (isMobileBrowser()) {
+        const main = document.querySelector('main');
+        main.style.marginTop = main.style.marginTop + '30px'
     }
 });
 
