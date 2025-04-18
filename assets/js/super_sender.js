@@ -1495,21 +1495,21 @@ function arrayOfEmailAddressesFromPersonIDs(array_of_pids){
 }
 
 //Fix Top Margin on Mobile Version
-function isMobileBrowser() {
-    return (
-        /Mobi|Android/i.test(navigator.userAgent) ||
-        (navigator.maxTouchPoints && navigator.maxTouchPoints > 1)
-    );
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (isMobileBrowser()) {
-        const main = document.querySelector('main');
-        const margin_top = parseInt(getComputedStyle(main).marginTop)
-        console.log('top margin:', margin_top)
-        main.style.marginTop = `${margin_top+90}px`
+window.addEventListener('load', () => {
+    if (/Mobi|Android/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1)) {
+      const root = document.documentElement;
+  
+      const navbar = document.querySelector('.navbar');
+      const banner = document.querySelector('.banner');
+      const tabbar = document.querySelector('.tabbar');
+  
+      if (navbar && banner && tabbar) {
+        root.style.setProperty('--navbar-height', navbar.offsetHeight + 'px');
+        root.style.setProperty('--banner-height', banner.offsetHeight + 'px');
+        root.style.setProperty('--tabbar-height', tabbar.offsetHeight + 'px');
+      }
     }
-})
+});
 
 //////////EVENT LISTENERS//////////
 loadButton.addEventListener('click',loadFile)
