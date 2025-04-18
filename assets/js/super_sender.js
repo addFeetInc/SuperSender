@@ -1494,6 +1494,16 @@ function arrayOfEmailAddressesFromPersonIDs(array_of_pids){
     return array_of_pids.map(val => emailAddressFromPersonID(val))
 }
 
+//Fix Top Margin on Mobile Version
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const content = document.querySelector('main');
+  
+    if (header && content) {
+      const headerHeight = header.offsetHeight;
+      content.style.marginTop = headerHeight + 'px';
+    }
+});
 
 //////////EVENT LISTENERS//////////
 loadButton.addEventListener('click',loadFile)
