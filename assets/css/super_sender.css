@@ -572,7 +572,7 @@ section table thead tr{
         height: fit-content;
     }
 
-    thead tr {
+    thead tr:not(.modal *) {
         position: static;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -582,7 +582,7 @@ section table thead tr{
         height: fit-content;
     }
 
-    thead th {
+    thead th:not(.modal *) {
         /* display: inline; */
         /* height:fit-content; */
         padding:0;
@@ -594,20 +594,20 @@ section table thead tr{
         position: static; */
     }
 
-    td {
+    td:not(.modal *) {
         display: grid;
         grid-template-columns: 160px 0.25fr 1fr;
         padding: 0.5rem 1rem;
         overflow: visible;
         white-space: nowrap;
     }
-    td::before {
+    td:not(.modal *)::before {
         content: attr(data-column) ": ";
         font-weight: 700;
         text-transform: capitalize;
     
     }
-    .grid-check-el, .grid-info-el{
+    .grid-check-el:not(.modal *), .grid-info-el:not(.modal *){
         text-align: left;
     }
     input{
