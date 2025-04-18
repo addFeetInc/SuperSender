@@ -1499,9 +1499,9 @@ window.addEventListener('load', () => {
     if (/Mobi|Android/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1)) {
       const root = document.documentElement;
   
-      const navbar = document.querySelector('.navbar');
-      const banner = document.querySelector('.banner');
-      const tabbar = document.querySelector('.tabbar');
+      const navbar = document.querySelector('#navbar');
+      const banner = document.querySelector('#banner');
+      const tabbar = document.querySelector('#tabbar');
   
       if (navbar && banner && tabbar) {
         root.style.setProperty('--navbar-height', navbar.offsetHeight + 'px');
