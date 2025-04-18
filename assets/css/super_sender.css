@@ -146,7 +146,7 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
     margin-top: calc(var(--navbar-height) + var(--banner-height) + var(--tabbar-height)); /* Offset for the header */
     /* padding: 20px; */
     overflow-y: auto; /* Make sure the main content is scrollable */
-    height: calc(100vh - calc(var(--navbar-height) + var(--banner-height) + var(--tabbar-height))); /* Full viewport height minus header height */
+    height: calc( calc(var(--vh, 1vh)*100) - calc(var(--navbar-height) + var(--banner-height) + var(--tabbar-height))); /* Full viewport height minus header height */
   }
 
   section:not(#modals) {
@@ -158,7 +158,7 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
   }
 
   section:last-of-type{
-    min-height: calc(100vh - calc(20px + var(--navbar-height) + var(--banner-height) + var(--tabbar-height)));
+    height: calc( calc(var(--vh, 1vh)*100) - calc(var(--navbar-height) + var(--banner-height) + var(--tabbar-height))); /* Full viewport height minus header height */
   }
 
   h2 {
@@ -481,7 +481,7 @@ section table thead tr{
 
 /* Make Modal Body Scrollable */
 .modal-dialog {
-  max-height: 90vh; /* limits full modal height */
+  max-height: calc(var(--vh, 1vh)*90); /* limits full modal height */
   display: flex;
   flex-direction: column;
 }
