@@ -410,23 +410,22 @@
       </section>
       <section id="company-tab">
         <div id="fixed-container-company">
-          <h5>COMPANIES</h5>
+          <div style="display:flex; flex-wrap: wrap; height: fit-content;">
+            <h5>COMPANIES</h5><div id="company-hidden-column-container" style="flex:1; text-align:right">Hidden Columns: </div>
+          </div>
           <div id="modify-company-grid-container">
-            <button id="init-add-company-btn">New Company</button>
-            <button id="init-del-company-btn">Remove Company</button>
-            <br>
+            <button id="init-add-company-btn">Add Company</button>
+            <button id="init-del-company-btn">Delete Company</button>
+            <!-- <br> -->
             <div id="add-company-container" class="hidden">
               <input type="text" id="add-company-input" placeholder="Enter company name"/>
-              <button id="add-company-btn">Add Company</button>
+              <button id="add-company-btn">ADD</button>
             </div>
             <div id="del-company-container" class="hidden">
               <input type="text" id="del-company-input" placeholder="Enter company ID"/>
-              <button id="del-company-btn">Delete Company</button>
+              <button id="del-company-btn">DELETE</button>
             </div>
           </div>
-          <!-- <br> -->
-          <div id="company-hidden-column-container">Hidden Columns: </div>
-          <!-- <br> -->
         </div>
     
         <table id="company-grid">
@@ -434,15 +433,19 @@
           <tbody></tbody>
         </table>
       </section>
+
       <section  id="person-tab">
         <div id="fixed-container-person">
-          <h5>PEOPLE</h5>
+          <div style="display:flex; flex-wrap: wrap; height: fit-content;">
+            <h5>PEOPLE</h5><div id="person-hidden-column-container" style="flex:1; text-align:right">Hidden Columns: </div>
+          </div>
           <div id="modify-person-grid-container">
-            <button id="init-add-col-btn">New Column</button>
-            <button id="init-add-per-btn">New Person</button>
-            <button id="init-del-col-btn">Remove Column</button>
-            <button id="init-del-per-btn">Remove Person</button>
-            <br>
+            <button id="init-add-per-btn">Add Person</button>
+            <button id="init-del-per-btn">Delete Person</button>
+            <button id="init-add-col-btn">Add Column</button>
+            <button id="init-del-col-btn">Delete Column</button>
+            
+            <!-- <br> -->
             <div id="add-col-container" class="hidden">
               <input type="text" id="add-column-person-input" placeholder="Enter column name"/>
               <select id="add-column-person-type-select">
@@ -451,79 +454,75 @@
                 <option value='#' selected>Group (#)</option>
                 <option value='!'>Point (!)</option>
               </select>
-              <button id="add-column-person-btn">Add Column</button>
+              <button id="add-column-person-btn">ADD</button>
             </div>
             <div id="add-per-container" class="hidden">
               <input type="text" id="add-per-person-input-name" placeholder="Enter person name"/>
               <select id="add-per-person-select-company"></select>
               <input type="email" id="add-per-person-input-email" placeholder="Enter email address"/>
-              <button id="add-per-person-btn">Add Person</button>
+              <button id="add-per-person-btn">ADD</button>
             </div>
             <div id="del-col-container" class="hidden">
               <input type="text" id="del-column-person-input" placeholder="Enter column name"/>
-              <button id="del-column-person-btn">Delete Column</button>
+              <button id="del-column-person-btn">DELETE</button>
             </div>
             <div id="del-per-container" class="hidden">
               <input type="text" id="del-per-person-input" placeholder="Enter person ID"/>
-              <button id="del-per-person-btn">Delete Person</button>
+              <button id="del-per-person-btn">DELETE</button>
             </div>
           </div>
-          <!-- <br> -->
-          <div id="person-hidden-column-container">Hidden Columns: </div>
-          <!-- <br> -->
         </div>
         <table id="person-grid">
           <thead></thead>
           <tbody></tbody>
         </table>
       </section>
+
       <section id="list-tab">
         <div id="fixed-container-list">
-          <h5>LISTS</h5>
+          <div style="display:flex; flex-wrap: wrap; height: fit-content;">
+            <h5>LISTS</h5><div id="list-hidden-column-container" style="flex:1; text-align:right">Hidden Columns: </div>
+          </div>
           <div id="modify-list-grid-container">
-            <button id="init-add-list-btn">New List</button>
-            <button id="init-del-list-btn">Remove List</button>
-            <br>
+            <button id="init-add-list-btn">Add List</button>
+            <button id="init-del-list-btn">Delete List</button>
+            <!-- <br> -->
             <div id="add-list-container" class="hidden">
               <input type="text" id="add-list-input" placeholder="Enter list name"/>
-              <button id="add-list-btn">Add List</button>
+              <button id="add-list-btn">ADD</button>
             </div>
             <div id="del-list-container" class="hidden">
               <input type="text" id="del-list-input" placeholder="Enter list ID"/>
-              <button id="del-list-btn">Delete List</button>
+              <button id="del-list-btn">DELETE</button>
             </div>
           </div>
           <!-- <br> -->
-          <div id="list-hidden-column-container">Hidden Columns: </div>
           <!-- <br> -->
         </div>
-    
-  
-  
         <table id="list-grid">
           <thead></thead>
           <tbody></tbody>
         </table>
       </section>
+
       <section id="generic-email-tab">
         <div id="fixed-container-generic-email">
-          <h5>GENERIC EMAILS</h5>
+          <div style="display:flex; flex-wrap: wrap; height: fit-content;">
+            <h5>GENERIC EMAILS</h5><div id="generic-email-hidden-column-container" style="flex:1; text-align:right">Hidden Columns: </div>
+          </div>
           <div id="modify-generic-email-grid-container">
-            <button id="init-add-generic-email-btn">New Generic Email</button>
-            <button id="init-del-generic-email-btn">Remove Generic Email</button>
-            <br>
+            <button id="init-add-generic-email-btn">Add Generic Email</button>
+            <button id="init-del-generic-email-btn">Delete Generic Email</button>
+            <!-- <br> -->
             <div id="add-generic-email-container" class="hidden">
               <input type="text" id="add-generic-email-input" placeholder="Enter Generic Email name"/>
-              <button id="add-generic-email-btn">Add Generic Email</button>
+              <button id="add-generic-email-btn">ADD</button>
             </div>
             <div id="del-generic-email-container" class="hidden">
               <input type="text" id="del-generic-email-input" placeholder="Enter Generic Email ID"/>
-              <button id="del-generic-email-btn">Delete Generic Email</button>
+              <button id="del-generic-email-btn">DELETE</button>
             </div>
           </div>
-          <!-- <br> -->
-          <div id="generic-email-hidden-column-container">Hidden Columns: </div>
-          <!-- <br> -->
         </div>
         <table id="generic-email-grid">
           <thead></thead>
