@@ -1,8 +1,8 @@
 :root {
-    --navbar-height: 40px;
-    --banner-height: 80px;
+    --navbar-height: 35px;
+    --banner-height: 60px;
     --tabbar-height: 40px;
-    --configurebar-height: 140px;
+    --configurebar-height: 75px;
     --section-header-height: 80px;
 
     --color-1: black; /* Define the color variable */
@@ -115,6 +115,20 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
     color: var(--normal-button-hover-text-color);
 }
 
+#del-company-btn, #del-per-person-btn, #del-column-person-btn, #del-list-btn, #del-generic-email-btn{
+    background-color: red;
+    color: black;
+    border: 1px black solid;
+    font-weight: bold;
+}
+
+#add-company-btn, #add-per-person-btn, #add-column-person-btn, #add-list-btn, #add-generic-email-btn{
+    background-color: green;
+    color: white;
+    border: 1px black solid;
+    font-weight: bold;
+}
+
 
 
 /* New CSS */
@@ -123,7 +137,7 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
   body {
     font-family: sans-serif;
@@ -158,7 +172,7 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
   }
 
   section:last-of-type{
-    height: calc( calc(var(--vh, 1vh)*100) - calc(var(--navbar-height) + var(--banner-height) + var(--tabbar-height))); /* Full viewport height minus header height */
+    min-height: calc( calc(var(--vh, 1vh)*100) - calc(20px + var(--navbar-height) + var(--banner-height) + var(--tabbar-height)));
   }
 
   h2 {
@@ -177,9 +191,14 @@ table button:not(.btn):hover, button:not(.btn):hover, input[type="file"]::file-s
 
   th, td {
     border: 1px solid #ccc;
-    padding: 8px;
+    /* padding: 8px; */
+    /* padding: 0.5rem; */
     text-align: left;
   }
+  td{
+    padding: 0.25rem;
+  }
+
 
   thead {
     background-color: #f0f0f0;
@@ -238,7 +257,7 @@ button.navbar-toggler{
     /* padding: 1rem; */
     z-index: 1000;
     border: 0;
-  }
+}
 
 .navbar-nav{
     /* width: 50vw; */
@@ -326,6 +345,9 @@ label{
     border-bottom: 2px solid darkgrey;
     z-index: 1;
 }
+:is(#fixed-container-person, #fixed-container-company, #fixed-container-list, #fixed-container-generic-email) *{
+    margin-bottom:0;
+}
 
 #file-tab{
     display: block;
@@ -360,11 +382,33 @@ label{
 }
 
 /* #modify-person-grid-container, #modify-company-grid-container, #modify-list-grid-container, #modify-generic-email-grid-container{
-
-    padding-bottom: 45px;
-    margin-bottom: -45px;
-
+    display: flex;
 } */
+
+:is(#modify-person-grid-container, #modify-company-grid-container, #modify-list-grid-container, #modify-generic-email-grid-container) input,select{
+    /* display: flex; */
+    /* padding-bottom: 45px; */
+    /* margin-bottom: -45px; */
+    /* width: 80px; */
+}
+
+@media (max-width: 1075px) and (min-width: 602px){
+    :is(#modify-person-grid-container) input,select{
+        /* display: flex; */
+        /* padding-bottom: 45px; */
+        /* margin-bottom: -45px; */
+        width: 80px;
+    }
+    :is(#modify-person-grid-container) button{
+        /* display: flex; */
+        /* padding-bottom: 45px; */
+        /* margin-bottom: -45px; */
+        width: 80px;
+        font-size: 11px;
+        padding: 3px 1px 3px 1px;
+    }
+
+}
 
 .row{
     display: block;
@@ -402,7 +446,7 @@ label{
 
 #person-hidden-column-container, #company-hidden-column-container, #list-hidden-column-container, #generic-email-hidden-column-container{
     /* background-color: aquamarine; */
-    height: 40px;
+    min-height: 35px;
     padding: 5px;
     font-weight: bold;
 }
@@ -414,13 +458,6 @@ input::placeholder {
     font-style: italic; /* Make the placeholder text italicized */
 }
 
-
-
-
-th, td {
-    padding: 0.5rem;
-
-}
 
 .grid-check-el, .grid-info-el{
     text-align: center;
@@ -514,6 +551,7 @@ section table thead tr{
 
 #user-guide-text{
     text-align: left;
+    width: 100%;
 }
 
 
@@ -561,6 +599,7 @@ section table thead tr{
     #fixed-container-person, #fixed-container-company, #fixed-container-list, #fixed-container-generic-email{
         position: static;
         height: fit-content;
+        padding-bottom: 3px;
         /* top: 0px; */
         /* height: var(--configurebar-height); */
         background-color: white;
@@ -607,11 +646,11 @@ section table thead tr{
         text-transform: capitalize;
     
     }
-    .grid-check-el:not(.modal *), .grid-info-el:not(.modal *){
+    .grid-check-el:not(.modal *), .grid-info-el:not(.modal tr){
         text-align: left;
     }
     input{
-        width: 50px;
+        max-width: 150px;
     }
 
 
