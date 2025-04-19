@@ -728,7 +728,7 @@ function addPerson(name, cid, email_address){
 }
 
 function findNextPersonIDNumber(){
-    let nextNumber = 0
+    let nextNumber = 1
     for (let bin in companyStaffBins){
         for (let person of companyStaffBins[bin]){
             thisNumber = parseInt(person['Person_ID'])
@@ -1133,7 +1133,7 @@ function addList(name){
 }
 
 function findNextListIDNumber(){
-    let nextNumber = 0
+    let nextNumber = 1
     for (let list of listObjects){
         thisNumber = parseInt(list['List_ID'])
         if (thisNumber>=nextNumber){
@@ -1367,7 +1367,7 @@ function addGenericEmail(name){
 }
 
 function findNextGenericEmailIDNumber(){
-    let nextNumber = 0
+    let nextNumber = 1
     for (let email of genericEmailObjects){
         thisNumber = parseInt(email['Email_ID'])
         if (thisNumber>=nextNumber){
