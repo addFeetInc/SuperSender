@@ -230,7 +230,7 @@ for (let col of ['&List_ID', 'List_Name', '#Inclusive', '%Exceptions', '*Points'
 }
 
 //Generic Email
-for (let col of ['&Email_ID', 'Name', '%To','%Cc','%Bcc','Subject','Greeting','Body','Closing','Signature']){
+for (let col of ['&Email_ID', 'Email_Name', '%To','%Cc','%Bcc','Subject','Greeting','Body','Closing','Signature']){
     genericEmailColumns.push(new Column(col))
 }
 
