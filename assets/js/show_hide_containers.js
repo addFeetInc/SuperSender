@@ -109,7 +109,7 @@ function showAllTabs(){
 
 ////SHOW & HIDE Person Grid Modification Divs
 function showAddColContainer(){
-    if(addColContainer.style.display == "block"){
+    if(addColContainer.style.display == "inline-block"){
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
         delColContainer.style.display = "none";
@@ -120,7 +120,7 @@ function showAddColContainer(){
         initAddPerBtn.style = ''
         initDelPerBtn.style = ''
     }else{
-        addColContainer.style.display = "block";
+        addColContainer.style.display = "inline-block";
         addPerContainer.style.display = "none";
         delColContainer.style.display = "none";
         delPerContainer.style.display = "none";
@@ -135,7 +135,7 @@ function showAddColContainer(){
 }
 
 function showAddPerContainer(){
-    if(addPerContainer.style.display == "block"){
+    if(addPerContainer.style.display == "inline-block"){
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
         delColContainer.style.display = "none";
@@ -147,7 +147,7 @@ function showAddPerContainer(){
         initDelPerBtn.style = ''
     }else{
         addColContainer.style.display = "none";
-        addPerContainer.style.display = "block";
+        addPerContainer.style.display = "inline-block";
         delColContainer.style.display = "none";
         delPerContainer.style.display = "none";
     
@@ -161,7 +161,7 @@ function showAddPerContainer(){
 }
 
 function showDelColContainer(){
-    if(delColContainer.style.display == "block"){
+    if(delColContainer.style.display == "inline-block"){
 
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
@@ -175,7 +175,7 @@ function showDelColContainer(){
     }else{
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
-        delColContainer.style.display = "block";
+        delColContainer.style.display = "inline-block";
         delPerContainer.style.display = "none";
 
         initDelColBtn.style.backgroundColor = "black";
@@ -188,7 +188,7 @@ function showDelColContainer(){
 }
 
 function showDelPerContainer(){
-    if(delPerContainer.style.display == "block"){
+    if(delPerContainer.style.display == "inline-block"){
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
         delColContainer.style.display = "none";
@@ -202,7 +202,7 @@ function showDelPerContainer(){
         addColContainer.style.display = "none";
         addPerContainer.style.display = "none";
         delColContainer.style.display = "none";
-        delPerContainer.style.display = "block";
+        delPerContainer.style.display = "inline-block";
     
         initDelPerBtn.style.backgroundColor = "black";
         initDelPerBtn.style.color = "white";
@@ -215,14 +215,14 @@ function showDelPerContainer(){
 
 ////SHOW & HIDE Company Grid Modification Div
 function showAddCompanyContainer(){
-    if(addCompanyContainer.style.display == "block"){
+    if(addCompanyContainer.style.display == "inline-block"){
         addCompanyContainer.style.display = "none";
         delCompanyContainer.style.display = "none";
 
         initAddCompanyBtn.style = ''
         initDelCompanyBtn.style = ''
     }else{
-        addCompanyContainer.style.display = "block";
+        addCompanyContainer.style.display = "inline-block";
         delCompanyContainer.style.display = "none";
     
         initAddCompanyBtn.style.backgroundColor = "black";
@@ -232,7 +232,7 @@ function showAddCompanyContainer(){
     }
 }
 function showDelCompanyContainer(){
-    if(delCompanyContainer.style.display == "block"){
+    if(delCompanyContainer.style.display == "inline-block"){
         addCompanyContainer.style.display = "none";
         delCompanyContainer.style.display = "none";
 
@@ -240,7 +240,7 @@ function showDelCompanyContainer(){
         initDelCompanyBtn.style = ''
     }else{
         addCompanyContainer.style.display = "none";
-        delCompanyContainer.style.display = "block";
+        delCompanyContainer.style.display = "inline-block";
     
         initDelCompanyBtn.style.backgroundColor = "black";
         initDelCompanyBtn.style.color = "white";
@@ -251,14 +251,14 @@ function showDelCompanyContainer(){
 
 ////SHOW & HIDE List Grid Modification Div
 function showAddListContainer(){
-    if(addListContainer.style.display == "block"){
+    if(addListContainer.style.display == "inline-block"){
         addListContainer.style.display = "none";
         delListContainer.style.display = "none";
 
         initAddListBtn.style = ''
         initDelListBtn.style = ''
     }else{
-        addListContainer.style.display = "block";
+        addListContainer.style.display = "inline-block";
         delListContainer.style.display = "none";
     
         initAddListBtn.style.backgroundColor = "black";
@@ -268,7 +268,7 @@ function showAddListContainer(){
     }
 }
 function showDelListContainer(){
-    if(delListContainer.style.display == "block"){
+    if(delListContainer.style.display == "inline-block"){
         addListContainer.style.display = "none";
         delListContainer.style.display = "none";
 
@@ -276,7 +276,7 @@ function showDelListContainer(){
         initDelListBtn.style = ''
     }else{
         addListContainer.style.display = "none";
-        delListContainer.style.display = "block";
+        delListContainer.style.display = "inline-block";
     
         initDelListBtn.style.backgroundColor = "black";
         initDelListBtn.style.color = "white";
@@ -287,14 +287,14 @@ function showDelListContainer(){
 
 ////SHOW & HIDE Generic Email Grid Modification Div
 function showAddGenericEmailContainer(){
-    if(addGenericEmailContainer.style.display == "block"){
+    if(addGenericEmailContainer.style.display == "inline-block"){
         addGenericEmailContainer.style.display = "none";
         delGenericEmailContainer.style.display = "none";
 
         initAddGenericEmailBtn.style = ''
         initDelGenericEmailBtn.style = ''
     }else{
-        addGenericEmailContainer.style.display = "block";
+        addGenericEmailContainer.style.display = "inline-block";
         delGenericEmailContainer.style.display = "none";
     
         initAddGenericEmailBtn.style.backgroundColor = "black";
@@ -304,7 +304,7 @@ function showAddGenericEmailContainer(){
     }
 }
 function showDelGenericEmailContainer(){
-    if(delGenericEmailContainer.style.display == "block"){
+    if(delGenericEmailContainer.style.display == "inline-block"){
         addGenericEmailContainer.style.display = "none";
         delGenericEmailContainer.style.display = "none";
 
@@ -312,7 +312,7 @@ function showDelGenericEmailContainer(){
         initDelGenericEmailBtn.style = ''
     }else{
         addGenericEmailContainer.style.display = "none";
-        delGenericEmailContainer.style.display = "block";
+        delGenericEmailContainer.style.display = "inline-block";
     
         initDelGenericEmailBtn.style.backgroundColor = "black";
         initDelGenericEmailBtn.style.color = "white";
